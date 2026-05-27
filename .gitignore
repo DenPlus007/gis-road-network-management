@@ -1,0 +1,76 @@
+# =============================================================
+# .gitignore — gis-road-network-management
+# =============================================================
+
+# ── Datos sensibles — NUNCA subir ────────────────────────────
+*.gdb/
+*.mxd
+*.aprx
+*.atbx
+*.sde
+*.kmz
+*.kml
+
+# Shapefiles con datos reales
+*.shp
+*.dbf
+*.shx
+*.prj
+*.sbn
+*.sbx
+*.cpg
+*.shp.xml
+*.dbf.xml
+
+# Tablas con datos reales
+*.xls
+*.xlsx
+*.csv
+
+# Proyectos y capas con rutas locales
+*.lyr
+*.lyrx
+*.style
+
+# CAD
+*.dwg
+*.dxf
+
+# Rasters
+*.tif
+*.tiff
+*.img
+*.ecw
+*.sid
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+env/
+venv/
+.venv/
+
+# ── ArcGIS Pro ────────────────────────────────────────────────
+BackupMXD/
+*.backups/
+GpMessages/
+ImportLog/
+Index/
+FMV_Data/
+
+# ── Sistema operativo ─────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# ── IDEs ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+
+# ── Temporales ────────────────────────────────────────────────
+*.tmp
+*.bak
+*.log
+*.swp
