@@ -1,0 +1,134 @@
+<svg width="680" height="420" viewBox="0 0 680 420" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Road Blockage Analysis — Barrier Detection</title>
+  <desc>Análisis de bloqueos y tranqueras en la red vial con estado habilitado/deshabilitado</desc>
+  <rect width="680" height="420" fill="#1e2a38" rx="8"/>
+  <rect x="0" y="0" width="680" height="28" fill="#0d1520" rx="8"/>
+  <rect x="0" y="18" width="680" height="10" fill="#0d1520"/>
+  <text x="12" y="18" font-family="monospace" font-size="11" fill="#a0b0c0">Table: Blockage Analysis — Barriers × Roads (Spatial Join)</text>
+  <!-- Toolbar -->
+  <rect x="0" y="28" width="680" height="22" fill="#162030"/>
+  <rect x="8" y="33" width="55" height="13" fill="#243047" rx="2"/>
+  <text x="35" y="43" text-anchor="middle" font-family="monospace" font-size="8" fill="#8a9bb0">Filter ▾</text>
+  <text x="220" y="43" font-family="monospace" font-size="9" fill="#5dade2">47 barriers | 12 disabled (Enabled=NO)</text>
+  <!-- Headers -->
+  <rect x="0" y="50" width="680" height="20" fill="#162030"/>
+  <g font-family="monospace" font-size="8.5" fill="#a0b0c0" font-weight="bold">
+    <text x="12" y="64">Barrier_ID</text>
+    <line x1="85" y1="50" x2="85" y2="420" stroke="#243047" stroke-width="0.5"/>
+    <text x="90" y="64">Type</text>
+    <line x1="155" y1="50" x2="155" y2="420" stroke="#243047" stroke-width="0.5"/>
+    <text x="160" y="64">Road_ID</text>
+    <line x1="220" y1="50" x2="220" y2="420" stroke="#243047" stroke-width="0.5"/>
+    <text x="225" y="64">Enabled</text>
+    <line x1="285" y1="50" x2="285" y2="420" stroke="#243047" stroke-width="0.5"/>
+    <text x="290" y="64">Distance_m</text>
+    <line x1="370" y1="50" x2="370" y2="420" stroke="#243047" stroke-width="0.5"/>
+    <text x="375" y="64">Action required</text>
+    <line x1="495" y1="50" x2="495" y2="420" stroke="#243047" stroke-width="0.5"/>
+    <text x="500" y="64">Confirmed</text>
+  </g>
+  <!-- Rows -->
+  <g font-family="monospace" font-size="8.5">
+    <!-- Row 1 disabled -->
+    <rect x="0" y="70" width="680" height="19" fill="#3a0808"/>
+    <text x="12" y="83" fill="#5dade2">BLQ-001</text>
+    <text x="90" y="83" fill="#c8d8e8">Gate</text>
+    <text x="160" y="83" fill="#c8d8e8">CAM-142</text>
+    <rect x="225" y="73" width="46" height="14" fill="#7B241C" rx="2"/>
+    <text x="248" y="83" text-anchor="middle" fill="#FFC7CE" font-weight="bold">NO</text>
+    <text x="290" y="83" fill="#c8d8e8">3.2</text>
+    <rect x="375" y="73" width="106" height="14" fill="#5a1010" rx="2"/>
+    <text x="428" y="83" text-anchor="middle" fill="#e74c3c">⚠️ Verify with security</text>
+    <text x="500" y="83" fill="#8a5050">Pending</text>
+
+    <!-- Row 2 enabled -->
+    <text x="12" y="101" fill="#5dade2">BLQ-002</text>
+    <text x="90" y="101" fill="#c8d8e8">Cattle guard</text>
+    <text x="160" y="101" fill="#c8d8e8">CAM-089</text>
+    <rect x="225" y="91" width="46" height="14" fill="#1a5a1a" rx="2"/>
+    <text x="248" y="101" text-anchor="middle" fill="#C6EFCE" font-weight="bold">YES</text>
+    <text x="290" y="101" fill="#c8d8e8">1.8</text>
+    <text x="375" y="101" fill="#5a7a5a">— OK</text>
+    <text x="500" y="101" fill="#5a7a5a">2024-08-15</text>
+
+    <!-- Row 3 disabled -->
+    <rect x="0" y="108" width="680" height="19" fill="#3a0808"/>
+    <text x="12" y="121" fill="#5dade2">BLQ-003</text>
+    <text x="90" y="121" fill="#c8d8e8">Blockage</text>
+    <text x="160" y="121" fill="#c8d8e8">CAM-317</text>
+    <rect x="225" y="111" width="46" height="14" fill="#7B241C" rx="2"/>
+    <text x="248" y="121" text-anchor="middle" fill="#FFC7CE" font-weight="bold">NO</text>
+    <text x="290" y="121" fill="#c8d8e8">7.1</text>
+    <rect x="375" y="111" width="106" height="14" fill="#5a1010" rx="2"/>
+    <text x="428" y="121" text-anchor="middle" fill="#e74c3c">⚠️ Verify with security</text>
+    <text x="500" y="121" fill="#8a5050">Pending</text>
+
+    <!-- Row 4 enabled -->
+    <text x="12" y="139" fill="#5dade2">BLQ-004</text>
+    <text x="90" y="139" fill="#c8d8e8">Gate</text>
+    <text x="160" y="139" fill="#c8d8e8">CAM-201</text>
+    <rect x="225" y="129" width="46" height="14" fill="#1a5a1a" rx="2"/>
+    <text x="248" y="139" text-anchor="middle" fill="#C6EFCE" font-weight="bold">YES</text>
+    <text x="290" y="139" fill="#c8d8e8">2.5</text>
+    <text x="375" y="139" fill="#5a7a5a">— OK</text>
+    <text x="500" y="139" fill="#5a7a5a">2024-07-30</text>
+
+    <!-- Row 5 disabled -->
+    <rect x="0" y="146" width="680" height="19" fill="#3a0808"/>
+    <text x="12" y="159" fill="#5dade2">BLQ-005</text>
+    <text x="90" y="159" fill="#c8d8e8">Gate</text>
+    <text x="160" y="159" fill="#c8d8e8">CAM-088</text>
+    <rect x="225" y="149" width="46" height="14" fill="#7B241C" rx="2"/>
+    <text x="248" y="159" text-anchor="middle" fill="#FFC7CE" font-weight="bold">NO</text>
+    <text x="290" y="159" fill="#c8d8e8">4.0</text>
+    <rect x="375" y="149" width="106" height="14" fill="#1a5a1a" rx="2"/>
+    <text x="428" y="159" text-anchor="middle" fill="#C6EFCE">✅ Confirmed open</text>
+    <text x="500" y="159" fill="#27ae60">2024-08-19</text>
+
+    <!-- Row 6 -->
+    <text x="12" y="177" fill="#5dade2">BLQ-006</text>
+    <text x="90" y="177" fill="#c8d8e8">Cattle guard</text>
+    <text x="160" y="177" fill="#c8d8e8">CAM-405</text>
+    <rect x="225" y="167" width="46" height="14" fill="#1a5a1a" rx="2"/>
+    <text x="248" y="177" text-anchor="middle" fill="#C6EFCE" font-weight="bold">YES</text>
+    <text x="290" y="177" fill="#c8d8e8">0.9</text>
+    <text x="375" y="177" fill="#5a7a5a">— OK</text>
+    <text x="500" y="177" fill="#5a7a5a">2024-08-10</text>
+
+    <!-- dots -->
+    <text x="12" y="202" fill="#5a6a7a">...</text>
+    <text x="500" y="202" fill="#5a6a7a">41 more records</text>
+  </g>
+
+  <!-- Summary panel -->
+  <rect x="0" y="250" width="680" height="120" fill="#111d2a"/>
+  <line x1="0" y1="250" x2="680" y2="250" stroke="#243047" stroke-width="1"/>
+  <text x="20" y="272" font-family="monospace" font-size="10" fill="#8a9bb0" font-weight="bold">Batch summary — Blockage Analysis</text>
+  <!-- Stats boxes -->
+  <rect x="20" y="282" width="110" height="50" fill="#0a1520" stroke="#5dade2" stroke-width="0.5" rx="4"/>
+  <text x="75" y="300" text-anchor="middle" font-family="monospace" font-size="9" fill="#5dade2">Total barriers</text>
+  <text x="75" y="320" text-anchor="middle" font-family="monospace" font-size="18" fill="#5dade2" font-weight="bold">47</text>
+
+  <rect x="145" y="282" width="110" height="50" fill="#3a0808" stroke="#e74c3c" stroke-width="0.5" rx="4"/>
+  <text x="200" y="300" text-anchor="middle" font-family="monospace" font-size="9" fill="#e74c3c">Disabled (NO)</text>
+  <text x="200" y="320" text-anchor="middle" font-family="monospace" font-size="18" fill="#e74c3c" font-weight="bold">12</text>
+
+  <rect x="270" y="282" width="110" height="50" fill="#2a2200" stroke="#f1c40f" stroke-width="0.5" rx="4"/>
+  <text x="325" y="300" text-anchor="middle" font-family="monospace" font-size="9" fill="#f1c40f">Pending confirm.</text>
+  <text x="325" y="320" text-anchor="middle" font-family="monospace" font-size="18" fill="#f1c40f" font-weight="bold">8</text>
+
+  <rect x="395" y="282" width="110" height="50" fill="#0a2a0a" stroke="#27ae60" stroke-width="0.5" rx="4"/>
+  <text x="450" y="300" text-anchor="middle" font-family="monospace" font-size="9" fill="#27ae60">Confirmed open</text>
+  <text x="450" y="320" text-anchor="middle" font-family="monospace" font-size="18" fill="#27ae60" font-weight="bold">4</text>
+
+  <rect x="520" y="282" width="140" height="50" fill="#1a1a2a" stroke="#9b59b6" stroke-width="0.5" rx="4"/>
+  <text x="590" y="298" text-anchor="middle" font-family="monospace" font-size="8" fill="#9b59b6">Spatial join radius</text>
+  <text x="590" y="314" text-anchor="middle" font-family="monospace" font-size="13" fill="#9b59b6" font-weight="bold">20 m</text>
+  <text x="590" y="326" text-anchor="middle" font-family="monospace" font-size="8" fill="#6a4a9a">blockage_analysis.py</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="370" width="680" height="50" fill="#0f1a26"/>
+  <line x1="0" y1="370" x2="680" y2="370" stroke="#243047" stroke-width="1"/>
+  <text x="20" y="390" font-family="monospace" font-size="9" fill="#8a9bb0">Next action: coordinate with security team for 8 pending confirmations</text>
+  <text x="20" y="408" font-family="monospace" font-size="9" fill="#8a9bb0">Export: blockage_report_2024-08-19.xlsx  |  ArcGIS Pro — Network Analyst</text>
+</svg>

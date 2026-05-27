@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- TITLE -->
+    <mxCell id="title" value="Road Network Management — GIS Workflow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=20;fontStyle=1;fontColor=#1E4D78;" vertex="1" parent="1">
+      <mxGeometry x="200" y="20" width="1250" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- ═══════════════════ MODULE A — ROAD NETWORK ANALYSIS ═══════════════════ -->
+    <mxCell id="mod_a_bg" value="" style="rounded=1;fillColor=#E6F1FB;strokeColor=#185FA5;opacity=20;" vertex="1" parent="1">
+      <mxGeometry x="40" y="75" width="830" height="660" as="geometry"/>
+    </mxCell>
+    <mxCell id="mod_a_title" value="MODULE A — Road Network Analysis" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=13;fontColor=#185FA5;" vertex="1" parent="1">
+      <mxGeometry x="40" y="80" width="830" height="25" as="geometry"/>
+    </mxCell>
+
+    <!-- STAGE 1 — DATA MODEL -->
+    <mxCell id="s1_bg" value="" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=40;" vertex="1" parent="1">
+      <mxGeometry x="60" y="115" width="380" height="180" as="geometry"/>
+    </mxCell>
+    <mxCell id="s1_title" value="STAGE 1 — DATA MODEL SETUP" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=10;fontColor=#0C447C;" vertex="1" parent="1">
+      <mxGeometry x="60" y="120" width="380" height="18" as="geometry"/>
+    </mxCell>
+    <mxCell id="s1_gdb" value="Feature Dataset in GDB (shared CRS)" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="80" y="145" width="340" height="30" as="geometry"/>
+    </mxCell>
+    <mxCell id="s1_fc1" value="FC_Cam_Caminos (roads)" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="80" y="183" width="155" height="28" as="geometry"/>
+    </mxCell>
+    <mxCell id="s1_fc2" value="FC_Cam_Bifurcaciones (junctions)" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="245" y="183" width="175" height="28" as="geometry"/>
+    </mxCell>
+    <mxCell id="s1_fc3" value="FC_Cam_Mojones · Obras · Bloqueos · Giros" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="80" y="219" width="340" height="28" as="geometry"/>
+    </mxCell>
+    <mxCell id="s1_note" value="🔑 Endpoint_1 / Endpoint_2 ↔ Bifurcation IDs" style="rounded=1;fillColor=#E6F1FB;strokeColor=#378ADD;fontSize=10;fontColor=#042C53;" vertex="1" parent="1">
+      <mxGeometry x="80" y="256" width="340" height="25" as="geometry"/>
+    </mxCell>
+
+    <!-- STAGE 2 — EDITING -->
+    <mxCell id="s2_bg" value="" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;opacity=40;" vertex="1" parent="1">
+      <mxGeometry x="460" y="115" width="390" height="180" as="geometry"/>
+    </mxCell>
+    <mxCell id="s2_title" value="STAGE 2 — ROAD EDITING" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=10;fontColor=#7D6608;" vertex="1" parent="1">
+      <mxGeometry x="460" y="120" width="390" height="18" as="geometry"/>
+    </mxCell>
+    <mxCell id="s2_a" value="Digitize road traces + snap to junctions" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="475" y="145" width="360" height="28" as="geometry"/>
+    </mxCell>
+    <mxCell id="s2_b" value="Complete attributes per editing standard" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="475" y="181" width="360" height="28" as="geometry"/>
+    </mxCell>
+    <mxCell id="s2_c" value="Hierarchy · Surface · Width · Jurisdiction" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="475" y="217" width="360" height="28" as="geometry"/>
+    </mxCell>
+    <mxCell id="s2_note" value="⚠️ Roads to wells inherit width + jurisdiction from access road" style="rounded=1;fillColor=#FEF9E7;strokeColor=#d6b656;fontSize=10;fontColor=#7D6608;" vertex="1" parent="1">
+      <mxGeometry x="475" y="255" width="360" height="25" as="geometry"/>
+    </mxCell>
+
+    <!-- Arrow S1→S2 -->
+    <mxCell id="arr12" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#1E4D78;strokeWidth=2;" edge="1" source="s1_bg" target="s2_bg" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- STAGE 3 — TOPOLOGY -->
+    <mxCell id="s3_bg" value="" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;opacity=40;" vertex="1" parent="1">
+      <mxGeometry x="60" y="320" width="380" height="200" as="geometry"/>
+    </mxCell>
+    <mxCell id="s3_title" value="STAGE 3 — TOPOLOGY VALIDATION" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=10;fontColor=#1E6B1E;" vertex="1" parent="1">
+      <mxGeometry x="60" y="325" width="380" height="18" as="geometry"/>
+    </mxCell>
+    <mxCell id="s3_r1" value="Must Not Overlap" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="80" y="350" width="160" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="s3_r2" value="Must Not Intersect" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="252" y="350" width="165" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="s3_r3" value="Must Not Have Dangles" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="80" y="384" width="165" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="s3_r4" value="Must Not Have Pseudo Nodes" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="253" y="384" width="164" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="s3_r5" value="Must Be Single Part" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="80" y="418" width="160" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="s3_r6" value="Endpoint Must Be Covered By" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="248" y="418" width="168" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="s3_note" value="8 topology rules → Validate → Fix → Re-validate until 0 errors" style="rounded=1;fillColor=#EAF3DE;strokeColor=#3B6D11;fontSize=10;fontColor=#173404;" vertex="1" parent="1">
+      <mxGeometry x="80" y="454" width="340" height="25" as="geometry"/>
+    </mxCell>
+    <mxCell id="s3_exc" value="Mark dead-ends as exceptions" style="rounded=1;fillColor=#EAF3DE;strokeColor=#82b366;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="80" y="487" width="340" height="22" as="geometry"/>
+    </mxCell>
+
+    <!-- STAGE 4 — GEOMETRY QC -->
+    <mxCell id="s4_bg" value="" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;opacity=40;" vertex="1" parent="1">
+      <mxGeometry x="460" y="320" width="390" height="200" as="geometry"/>
+    </mxCell>
+    <mxCell id="s4_title" value="STAGE 4 — GEOMETRY QC" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=10;fontColor=#6C3483;" vertex="1" parent="1">
+      <mxGeometry x="460" y="325" width="390" height="18" as="geometry"/>
+    </mxCell>
+    <mxCell id="s4_cg" value="Check Geometry → geometry_errors table
+(self-intersections, null geometry, reordering)" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="475" y="350" width="360" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="s4_ov" value="Count Overlapping Features → COUNT_ &gt; 1
+flag overlapping segments" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="475" y="400" width="360" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="s4_fix" value="Manual correction → re-run until clean" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="475" y="450" width="360" height="28" as="geometry"/>
+    </mxCell>
+    <mxCell id="s4_tol" value="ℹ️ Short segments: increase XY tolerance to 0.005–0.01m" style="rounded=1;fillColor=#F4ECF7;strokeColor=#9673a6;fontSize=10;fontColor=#6C3483;" vertex="1" parent="1">
+      <mxGeometry x="475" y="488" width="360" height="25" as="geometry"/>
+    </mxCell>
+
+    <!-- Arrow S2→S3 -->
+    <mxCell id="arr23" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#1E4D78;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="s2_bg" target="s3_bg" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <!-- Arrow S3→S4 -->
+    <mxCell id="arr34" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#1E4D78;strokeWidth=2;" edge="1" source="s3_bg" target="s4_bg" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- STAGE 5 — NETWORK DATASET -->
+    <mxCell id="s5_bg" value="" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;opacity=40;" vertex="1" parent="1">
+      <mxGeometry x="60" y="545" width="380" height="170" as="geometry"/>
+    </mxCell>
+    <mxCell id="s5_title" value="STAGE 5 — NETWORK DATASET" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=10;fontColor=#7B241C;" vertex="1" parent="1">
+      <mxGeometry x="60" y="550" width="380" height="18" as="geometry"/>
+    </mxCell>
+    <mxCell id="s5_a" value="Build Network Dataset in ArcGIS Pro" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="80" y="575" width="340" height="28" as="geometry"/>
+    </mxCell>
+    <mxCell id="s5_b" value="Edge weight: Length_m · Turn restrictions" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="80" y="611" width="340" height="28" as="geometry"/>
+    </mxCell>
+    <mxCell id="s5_c" value="Connectivity at endpoints · Enabled attribute" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="80" y="647" width="340" height="28" as="geometry"/>
+    </mxCell>
+    <mxCell id="s5_d" value="✅ Rebuild after every topology/geometry fix" style="rounded=1;fillColor=#FADBD8;strokeColor=#b85450;fontSize=10;fontColor=#7B241C;" vertex="1" parent="1">
+      <mxGeometry x="80" y="683" width="340" height="22" as="geometry"/>
+    </mxCell>
+
+    <!-- STAGE 6 — ROUTING -->
+    <mxCell id="s6_bg" value="" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=40;" vertex="1" parent="1">
+      <mxGeometry x="460" y="545" width="390" height="170" as="geometry"/>
+    </mxCell>
+    <mxCell id="s6_title" value="STAGE 6 — ROUTING VERIFICATION" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=10;fontColor=#0C447C;" vertex="1" parent="1">
+      <mxGeometry x="460" y="550" width="390" height="18" as="geometry"/>
+    </mxCell>
+    <mxCell id="s6_a" value="Analysis → Network Analysis → Route" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="475" y="575" width="360" height="28" as="geometry"/>
+    </mxCell>
+    <mxCell id="s6_b" value="Create start/end stop points → Run" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="475" y="611" width="360" height="28" as="geometry"/>
+    </mxCell>
+    <mxCell id="s6_c" value="Inspect path · Check Enabled fields" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="475" y="647" width="360" height="28" as="geometry"/>
+    </mxCell>
+    <mxCell id="s6_d" value="Discard routing layers after verification" style="rounded=1;fillColor=#E6F1FB;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="475" y="683" width="360" height="22" as="geometry"/>
+    </mxCell>
+
+    <!-- Arrows S4→S5, S5→S6 -->
+    <mxCell id="arr45" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#1E4D78;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="s4_bg" target="s5_bg" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="arr56" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#1E4D78;strokeWidth=2;" edge="1" source="s5_bg" target="s6_bg" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- ═══════════════════ MODULE B — BLOCKAGE ANALYSIS ═══════════════════ -->
+    <mxCell id="mod_b_bg" value="" style="rounded=1;fillColor=#FEF9E7;strokeColor=#D68910;opacity=20;" vertex="1" parent="1">
+      <mxGeometry x="900" y="75" width="700" height="660" as="geometry"/>
+    </mxCell>
+    <mxCell id="mod_b_title" value="MODULE B — Road Blockage Analysis" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontStyle=1;fontSize=13;fontColor=#D68910;" vertex="1" parent="1">
+      <mxGeometry x="900" y="80" width="700" height="25" as="geometry"/>
+    </mxCell>
+
+    <!-- B1 — Geometry check -->
+    <mxCell id="b1" value="Geometry pre-check
+Check Geometry + Count Overlapping" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="970" y="120" width="560" height="45" as="geometry"/>
+    </mxCell>
+
+    <!-- B2 — Load layers -->
+    <mxCell id="b2" value="Load layers: Roads + Blockages + Gates + Cattle guards" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="970" y="195" width="560" height="35" as="geometry"/>
+    </mxCell>
+
+    <!-- B3 — Spatial join -->
+    <mxCell id="b3" value="Spatial Join: barriers × roads (within 20m)
+→ barriers_joined (each barrier gets Road_ID)" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="970" y="260" width="560" height="45" as="geometry"/>
+    </mxCell>
+
+    <!-- B4 — Filter disabled -->
+    <mxCell id="b4" value='Filter: Enabled = "NO"
+→ disabled barriers list' style="rounded=1;fillColor=#FFC7CE;strokeColor=#E74C3C;fontSize=10;fontColor=#7B241C;" vertex="1" parent="1">
+      <mxGeometry x="970" y="335" width="560" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- B5 — Dup geometry -->
+    <mxCell id="b5" value="Find Identical → detect duplicate barrier geometries
+→ remove duplicates before reporting" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="970" y="405" width="560" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- Decision -->
+    <mxCell id="b_dec" value="Field / security
+confirmation?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#1E4D78;strokeColor=#1E4D78;fontColor=#ffffff;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="1055" y="475" width="130" height="90" as="geometry"/>
+    </mxCell>
+
+    <!-- YES path -->
+    <mxCell id="b_yes" value="Update GIS:
+Enabled = YES
+on barrier + road + bifurcation" style="rounded=1;fillColor=#C6EFCE;strokeColor=#27AE60;fontSize=10;fontColor=#1E6B1E;" vertex="1" parent="1">
+      <mxGeometry x="1230" y="487" width="200" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="b_yes_lbl" value="Confirmed open" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#27AE60;" vertex="1" parent="1">
+      <mxGeometry x="1185" y="506" width="45" height="20" as="geometry"/>
+    </mxCell>
+
+    <!-- NO path — flag -->
+    <mxCell id="b_no" value="Keep Enabled = NO
+Flag for follow-up" style="rounded=1;fillColor=#FFC7CE;strokeColor=#E74C3C;fontSize=10;fontColor=#7B241C;" vertex="1" parent="1">
+      <mxGeometry x="930" y="495" width="110" height="45" as="geometry"/>
+    </mxCell>
+    <mxCell id="b_no_lbl" value="Still closed" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#E74C3C;" vertex="1" parent="1">
+      <mxGeometry x="1043" y="515" width="60" height="20" as="geometry"/>
+    </mxCell>
+
+    <!-- Re-run routing -->
+    <mxCell id="b_route" value="Re-run routing verification
+Confirm detour resolved" style="rounded=1;fillColor=#d5e8d4;strokeColor=#27AE60;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="1160" y="590" width="290" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- Script callout -->
+    <mxCell id="b_script" value="🐍 blockage_analysis.py
+Automated detection + .xlsx report" style="rounded=1;fillColor=#F4ECF7;strokeColor=#9673a6;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="970" y="660" width="560" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- Arrows MODULE B -->
+    <mxCell id="ab12" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#D68910;strokeWidth=1.5;" edge="1" source="b1" target="b2" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="ab23" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#D68910;strokeWidth=1.5;" edge="1" source="b2" target="b3" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="ab34" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#D68910;strokeWidth=1.5;" edge="1" source="b3" target="b4" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="ab45" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#D68910;strokeWidth=1.5;" edge="1" source="b4" target="b5" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="ab5dec" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#D68910;strokeWidth=1.5;" edge="1" source="b5" target="b_dec" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="ab_yes" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#27AE60;strokeWidth=1.5;" edge="1" source="b_dec" target="b_yes" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="ab_no" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#E74C3C;strokeWidth=1.5;" edge="1" source="b_dec" target="b_no" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="ab_route" value="" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#27AE60;strokeWidth=1.5;" edge="1" source="b_yes" target="b_route" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- LEGEND -->
+    <mxCell id="leg_bg" value="" style="rounded=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="40" y="755" width="680" height="50" as="geometry"/>
+    </mxCell>
+    <mxCell id="leg_t" value="Legend" style="text;html=1;strokeColor=none;fillColor=none;fontStyle=1;fontSize=10;" vertex="1" parent="1">
+      <mxGeometry x="55" y="760" width="60" height="18" as="geometry"/>
+    </mxCell>
+    <mxCell id="l1" value="" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1"><mxGeometry x="115" y="762" width="16" height="14" as="geometry"/></mxCell>
+    <mxCell id="l1t" value="Data model / Editing / Routing" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;" vertex="1" parent="1"><mxGeometry x="135" y="762" width="165" height="18" as="geometry"/></mxCell>
+    <mxCell id="l2" value="" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="300" y="762" width="16" height="14" as="geometry"/></mxCell>
+    <mxCell id="l2t" value="Topology validation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;" vertex="1" parent="1"><mxGeometry x="320" y="762" width="130" height="18" as="geometry"/></mxCell>
+    <mxCell id="l3" value="" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1"><mxGeometry x="450" y="762" width="16" height="14" as="geometry"/></mxCell>
+    <mxCell id="l3t" value="Geometry QC" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;" vertex="1" parent="1"><mxGeometry x="470" y="762" width="100" height="18" as="geometry"/></mxCell>
+    <mxCell id="l4" value="" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1"><mxGeometry x="570" y="762" width="16" height="14" as="geometry"/></mxCell>
+    <mxCell id="l4t" value="Network Dataset" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;" vertex="1" parent="1"><mxGeometry x="590" y="762" width="120" height="18" as="geometry"/></mxCell>
+    <mxCell id="l5" value="" style="rounded=1;fillColor=#FFC7CE;strokeColor=#E74C3C;" vertex="1" parent="1"><mxGeometry x="115" y="782" width="16" height="14" as="geometry"/></mxCell>
+    <mxCell id="l5t" value="Disabled barriers" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;" vertex="1" parent="1"><mxGeometry x="135" y="782" width="120" height="18" as="geometry"/></mxCell>
+    <mxCell id="l6" value="" style="rounded=1;fillColor=#C6EFCE;strokeColor=#27AE60;" vertex="1" parent="1"><mxGeometry x="260" y="782" width="16" height="14" as="geometry"/></mxCell>
+    <mxCell id="l6t" value="GIS update / Route confirmation" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;" vertex="1" parent="1"><mxGeometry x="280" y="782" width="180" height="18" as="geometry"/></mxCell>
+
+  </root>
+</mxGraphModel>
